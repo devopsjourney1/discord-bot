@@ -5,6 +5,3 @@ services:
 
 before_install:
 - docker image build -t ubuntu:dbot .
-
-script:
-- docker run -e TOKEN ubuntu:dbot
