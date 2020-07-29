@@ -5,7 +5,7 @@ RUN apt-get install python3 -y
 RUN apt-get install python3-pip -y
 
 COPY requirements.txt /home/requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /home/requirements.txt
 
 ENV HOME /home
 COPY dbot.py /home/dbot.py
