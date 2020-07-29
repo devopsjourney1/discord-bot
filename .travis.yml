@@ -5,3 +5,6 @@ services:
 
 before_install:
 - docker image build -t ubuntu:dbot .
+
+after_success:
+- ssh pi@${IPADDR} echo 'success!' >> deploy.log
