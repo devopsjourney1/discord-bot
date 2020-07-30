@@ -10,4 +10,4 @@ script:
 
 after_success:
 - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
-- ssh ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i /tmp/sftp_rsa "docker run -e ${TOKEN} ubuntu:dbot -d"
+- ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i /tmp/sftp_rsa "docker run -e ${TOKEN} ubuntu:dbot -d"
