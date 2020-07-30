@@ -1,11 +1,13 @@
-language: ruby
-
 services:
   - docker
 
-before_install:
-  - echo "Test" 
+#before_install:
+#  - echo "Test" 
 #- docker image build -t ubuntu:dbot .
+
+script:
+ - docker images
+
 
 after_success:
 - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
