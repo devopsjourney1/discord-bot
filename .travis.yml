@@ -10,5 +10,5 @@ script:
 
 after_success:
 - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
-- chmod 600 ~/tmp/ssh_rsa
+- chmod 600 /tmp/ssh_rsa
 - ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i /tmp/ssh_rsa "docker run -e ${TOKEN} ubuntu:dbot -d"
