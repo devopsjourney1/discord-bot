@@ -1,6 +1,10 @@
 import discord
 import sys
 import os
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+logging.debug('Starting Application')
 
 if os.getenv('TOKEN') is not None:
     token = os.environ.get('TOKEN')
