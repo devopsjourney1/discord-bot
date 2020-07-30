@@ -11,4 +11,4 @@ script:
 
 after_success:
 - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
-- ssh pi@${IPADDR} -i /tmp/sftp_rsa echo 'success!' >> deploy.log
+- ssh ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i /tmp/sftp_rsa echo 'success!' >> deploy.log
