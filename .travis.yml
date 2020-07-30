@@ -16,5 +16,4 @@ after_success:
 - docker push ${IMGNAME}
 - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
 - chmod 600 /tmp/ssh_rsa
-- ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i /tmp/ssh_rsa \
-"docker pull ${IMGNAME} && docker stop discordbot; docker rm discordbot; docker run --name discordbot -d -e TOKEN=${TOKEN} ${IMGNAME}"
+- ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i /tmp/ssh_rsa "docker pull ${IMGNAME} && docker stop discordbot; docker rm discordbot; docker run --name discordbot -d -e TOKEN=${TOKEN} ${IMGNAME}"
