@@ -11,7 +11,8 @@ services:
 #- docker image build -t ${IMGNAME} .
 
 script:
- - echo 'Insert test script here later'
+#TravisCI seems to be coming in on undocumented IP addresses.
+ - dig +short myip.opendns.com @resolver1.opendns.com
 
 
 after_success:
