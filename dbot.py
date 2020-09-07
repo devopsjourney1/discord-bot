@@ -14,9 +14,11 @@ print(f'Set token as {token}')
 
 join_greeting = '''Welcome to the DevOps Journey Discord! We are a new community that embraces everything DevOps related.
 
-The community is still new so sometimes our channel can be quiet but please feel free to ask questions are bring up a topic in our <#devops> channel.
+#Resources Channel has plenty of free learning resources.
 
-Don't forget to check out our #test channel for plenty of free learning resources!
+#Devops Channel to spark up any devops related questions or conversations.
+
+YouTube Channel: https://www.youtube.com/channel/UC4Snw5yrSDMXys31I18U3gg
 '''
 
 class MyClient(discord.Client):
