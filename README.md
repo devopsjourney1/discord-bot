@@ -19,5 +19,5 @@ docker image build -t bradmorg/ubuntu:dbot /home/pi/discord-bot
 docker push bradmorg/ubuntu:dbot 
 docker stop discordbot 
 docker rm discordbot
-docker run --name discordbot --restart always -d -e $TOKEN bradmorg/ubuntu:dbot
+docker run --name discordbot --restart always -d -e TOKEN=$TOKEN bradmorg/ubuntu:dbot
 ```
